@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ishak Hasan Sabbir - DevOps & Security Expert</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Poppins:wght@400;700&display=swap');
+
+    /* --- Sci-fi dark background with gradient and glitch effect --- */
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #00ffff;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* Neon text glow */
+    h1, h2, h3 {
+      font-family: 'Orbitron', monospace;
+      color: #00ffff;
+      text-shadow:
+        0 0 5px #00ffff,
+        0 0 10px #00ffff,
+        0 0 20px #00ffff,
+        0 0 40px #0ff,
+        0 0 80px #0ff;
+      margin-bottom: 20px;
+    }
+
+    header, footer {
+      background: #011f26;
+      text-align: center;
+      padding: 40px 20px;
+      border-bottom: 2px solid #00ffff;
+      letter-spacing: 3px;
+    }
+
+    footer {
+      border-top: 2px solid #00ffff;
+      margin-top: 60px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #009999;
+      letter-spacing: 2px;
+    }
+
+    .section {
+      max-width: 900px;
+      margin: 50px auto;
+      background: rgba(0, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px 40px;
+      box-shadow:
+        0 0 10px #00ffff99,
+        inset 0 0 20px #00ffff55;
+      backdrop-filter: blur(10px);
+    }
+
+    p {
+      color: #ccffff;
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+    }
+
+    ul.skill-list {
+      list-style-type: none;
+      padding-left: 0;
+      font-size: 1.15rem;
+    }
+
+    ul.skill-list li {
+      margin: 15px 0;
+      padding-left: 1.2rem;
+      position: relative;
+      color: #a0ffff;
+    }
+
+    ul.skill-list li::before {
+      content: '►';
+      position: absolute;
+      left: 0;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+
+    .btn-primary {
+      background-color: #00ffff;
+      border: none;
+      color: #011f26;
+      font-weight: 700;
+      padding: 14px 30px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #00ffffaa;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .btn-primary:hover {
+      background-color: #00bbbb;
+      box-shadow: 0 0 20px #00ffffee;
+      color: #000;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      background: transparent;
+      border: 2px solid #00ffff;
+      color: #00ffff;
+      padding: 12px 15px;
+      margin: 10px 0 20px 0;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      transition: border-color 0.3s ease;
+    }
+
+    form input:focus, form textarea:focus {
+      outline: none;
+      border-color: #00bbbb;
+      box-shadow: 0 0 10px #00bbbb;
+    }
+
+    /* Futuristic divider line */
+    .divider {
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #00ffff 0%, #00bbbb 50%, #00ffff 100%);
+      margin: 40px 0;
+      border-radius: 5px;
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 20px #00ffff;
+      }
+      50% {
+        opacity: 0.4;
+        box-shadow: none;
+      }
+    }
+
+    /* Glitch text effect for the name */
+    .glitch {
+      position: relative;
+      color: #00ffff;
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      animation: glitch 1.5s infinite;
+    }
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      overflow: hidden;
+      clip: rect(0, 900px, 0, 0);
+    }
+    .glitch::before {
+      left: 2px;
+      text-shadow: -2px 0 red;
+      animation: glitchTop 1.5s infinite;
+    }
+    .glitch::after {
+      left: -2px;
+      text-shadow: -2px 0 blue;
+      animation: glitchBottom 1.5s infinite;
+    }
+    @keyframes glitch {
+      0% {
+        text-shadow:
+          0 0 5px #00ffff,
+          0 0 10px #00ffff,
+          0 0 20px #00ffff,
+          0 0 40px #0ff,
+          0 0 80px #0ff;
+      }
+      20% {
+        text-shadow: none;
+      }
+      40% {
+        text-shadow:
+          0 0 5px #00ffff,
+          0 0 10px #00ffff,
+          0 0 20px #00ffff,
+          0 0 40px #0ff,
+          0 0 80px #0ff;
+      }
+      60% {
+        text-shadow: none;
+      }
+      80% {
+        text-shadow:
+          0 0 5px #00ffff,
+          0 0 10px #00ffff,
+          0 0 20px #00ffff,
+          0 0 40px #0ff,
+          0 0 80px #0ff;
+      }
+      100% {
+        text-shadow: none;
+      }
+    }
+    @keyframes glitchTop {
+      0%, 100% {
+        clip: rect(0, 900px, 0, 0);
+      }
+      50% {
+        clip: rect(0, 900px, 30px, 0);
+        transform: translate(-2px, -2px);
+      }
+    }
+    @keyframes glitchBottom {
+      0%, 100% {
+        clip: rect(0, 900px, 0, 0);
+      }
+      50% {
+        clip: rect(30px, 900px, 60px, 0);
+        transform: translate(2px, 2px);
+      }
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .section {
+        margin: 30px 15px;
+        padding: 25px 20px;
+      }
+      h1, h2, h3 {
+        font-size: 2rem;
+      }
+      .glitch {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 class="glitch" data-text="Ishak Hasan Sabbir">Ishak Hasan Sabbir</h1>
+  <p style="font-weight:700; font-size:1.3rem; letter-spacing: 1.5px; color:#00bbbb;">
+    Linux, Security, Cloud & DevOps Expert
+  </p>
+</header>
+
+<section class="section" id="about-me">
+  <h2>About Me</h2>
+  <p>
+    I am Ishak Hasan Sabbir. I work hard every day to be the best in Linux, server setup, and security.
+  </p>
+  <p>
+    I find weak spots in websites and fix them fast. I know how to keep servers safe and strong.
+  </p>
+  <p>
+    Today, I focus on cloud and DevOps. I use AWS and smart tools to make work easier and faster.
+  </p>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="skills">
+  <h2>My Skills</h2>
+  <ul class="skill-list">
+    <li><strong>Linux:</strong> Expert in commands, permissions, and security.</li>
+    <li><strong>Security & Pentesting:</strong> Find and fix problems in apps and websites.</li>
+    <li><strong>Server Management:</strong> Setup, run, and keep servers safe.</li>
+    <li><strong>AWS & Cloud:</strong> Use cloud to host apps with high speed and security.</li>
+    <li><strong>DevOps Tools:</strong> Docker, Jenkins, Git, CI/CD pipelines.</li>
+    <li><strong>Automation:</strong> Write scripts to do work fast and without mistakes.</li>
+  </ul>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="devops-practice">
+  <h2>DevOps Practice</h2>
+  <p>
+    I build pipelines that help developers send code fast to users. This is called Continuous Integration and Delivery.
+  </p>
+  <p>
+    I work with Linux servers and cloud platforms to keep apps running 24/7 without problems.
+  </p>
+  <p>
+    I watch systems closely. If problems come, I fix them fast.
+  </p>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="projects">
+  <h2>Projects</h2>
+  <ul class="skill-list">
+    <li>Setup Linux servers to host websites and apps.</li>
+    <li>Build automated CI/CD pipelines using Jenkins and GitHub Actions.</li>
+    <li>Create scripts to test website security automatically.</li>
+    <li>Deploy apps on AWS cloud with full automation.</li>
+    <li>Monitor servers and fix issues fast to keep systems safe.</li>
+  </ul>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="education">
+  <h2>Education & Learning</h2>
+  <p>
+    I study Computer Science and Engineering to learn more every day.
+  </p>
+  <p>
+    I do many online courses about Linux, cloud, and security. I keep growing my skills.
+  </p>
+  <p>
+    Learning never stops for me.
+  </p>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="testimonials">
+  <h2>What Others Say</h2>
+  <p><em>"Ishak is a true expert in Linux and security. He finds and fixes issues like a pro."</em> — Manager at Zayeed Real Estate</p>
+  <p><em>"His work in cloud and DevOps helped our projects run smoother and faster."</em> — Client from AWS Project</p>
+  <p><em>"Fast, smart, and always ready to help. A great team player."</em> — Team Lead at Pentesting Company</p>
+</section>
+
+<div class="divider"></div>
+
+<section class="section" id="contact">
+  <h2>Contact Me</h2>
+  <p>Want to talk about Linux, cloud, security, or DevOps? Send me a message!</p>
+  <form id="contactForm" style="max-width: 600px; margin:auto;">
+    <input type="text" id="name" placeholder="Your Name" required />
+    <input type="email" id="email" placeholder="Your Email" required />
+    <textarea id="message" rows="6" placeholder="Your Message" required></textarea>
+    <button type="submit" class="btn-primary">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 Ishak Hasan Sabbir — All rights reserved.
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you! Your message was sent.');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
